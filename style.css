@@ -1,0 +1,62 @@
+  body{
+      padding: 0;
+      margin: 0;
+  }
+  h1{
+    text-align: center;
+}
+h1 span{
+    color: rgb(12, 12, 12);
+    padding: 10px;
+    border-radius: 10px;
+}
+.input-holder{
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(116, 231, 240);
+}
+.input-holder button{
+    height: 50px;
+    width: 150px;
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: none;
+    background-color: rgb(172, 140, 140);
+    outline: none;
+}
+.input-holder input{
+    height: 50px;
+    width: 90%;
+    margin-top: 30px;
+    font-size: 20px;
+}
+.list{
+    border: 1px solid black;
+    background-color: rgb(42, 217, 240);
+    height: 80vh;
+    padding: 0;
+}
+.list-holder ul{
+    list-style: none;
+    margin: 0;
+}
+.list-holder ul li{
+    color: black;
+    padding: 25px;
+    font-size: 24px;
+    margin-top: 10px;
+    margin: 20px;
+    border: 10px solid black;
+}
+.list-holder ul li button{
+    height: 50px;
+    float: right;
+    width: 150px;
+    margin-top: -15px;
+    margin-left: 5px;
+    background-color: rgb(194, 104, 104);
+    outline: none;
+
+}
