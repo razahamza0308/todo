@@ -1,5 +1,6 @@
 
-var list = document.querySelector('.list');
+    var listy=document.getElementById("ppeo")
+
 
 function addTask() {
     var todo_item = document.getElementById("taskInput");
@@ -8,8 +9,11 @@ function addTask() {
         return;
     }
     var li = document.createElement('li');
-    var liText = document.createTextNode(todo_item.value);
-    li.appendChild(liText);
+    var inp = document.createElement('input');
+    inp.setAttribute('id',"getinp")
+     inp.setAttribute('value',todo_item.value)
+     inp.setAttribute("disabled","disabled")
+    li.appendChild(inp);    
 
 
     var delBtn = document.createElement('button');
@@ -22,17 +26,18 @@ function addTask() {
     var editBtn = document.createElement('button');
     var editText = document.createTextNode('EDIT');
     editBtn.setAttribute('class','btn');
-    editBtn.setAttribute('onclick','editItem(this);')
+    editBtn.setAttribute('onclick','updt(this);')
     editBtn.appendChild(editText);
 
 
     li.appendChild(delBtn);
     li.appendChild(editBtn);
 
-    list.appendChild(li);
+    
 
-    todo_item.value = "";
-    console.log(li)
+
+    listy.appendChild(li);
+
 
 }
 
@@ -41,11 +46,23 @@ function deleteItem(e) {
 }
 
 function deleteAll() {
-    list.innerHTML = "";
+    listy.innerHTML = "";
 }
 
-function editItem(e) {
-    console.log(e.parentNode)
-    var val = prompt("Enter updated value ",e.parentNode.firstChild.nodeValue);
-    e.parentNode.firstChild.nodeValue = val;
+function updt(e) {
+
+
+    e.innerHTML = "UPDATE";
+    e.style.backgroundColor = "green";
+    e.style.color = "white";
+    getinp.disabled=false
+    e.setAttribute("onclick", "update(this)")
+}
+function update(e) {
+    e.innerHTML = "EDIT"
+    e.style.backgroundColor ="white" ;
+    e.style.color = "black";
+    getinp.disabled = true
+    e.setAttribute("onclick", "updt(this)")
+
 }
